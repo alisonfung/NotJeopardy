@@ -1,0 +1,16 @@
+:: StoryTitle
+Not Jeopardy
+
+
+:: StoryData
+{
+  "ifid": "56DCEF5D-594C-4166-BDF2-57BB8F53FE82",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Start Screen",
+  "zoom": 1
+}
+
+
+:: Start Screen {"position":"600,250","size":"100,100"}
+Welcome to Not Jeopardy
