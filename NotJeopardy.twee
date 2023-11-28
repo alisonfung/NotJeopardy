@@ -7,10 +7,292 @@ Not Jeopardy
   "ifid": "56DCEF5D-594C-4166-BDF2-57BB8F53FE82",
   "format": "Harlowe",
   "format-version": "3.3.7",
-  "start": "Start Screen",
-  "zoom": 1
+  "start": "Opening ",
+  "zoom": 0.6
 }
 
 
-:: Start Screen {"position":"600,250","size":"100,100"}
+:: CA $1000 {"position":"300,1000","size":"100,100"}
+
+
+
+:: CA $200 {"position":"300,600","size":"100,100"}
+
+
+
+:: CA $400 {"position":"300,700","size":"100,100"}
+
+
+
+:: CA $600 {"position":"300,800","size":"100,100"}
+
+
+
+:: CA $800 {"position":"300,900","size":"100,100"}
+
+
+
+:: CSS [stylesheet] {"position":"900,200","size":"100,100"}
+tw-include[type="startup"] {
+	display: none;
+}
+
+
+:: Category Select {"position":"600,375","size":"100,100"}
+Pick a category:
+
+[[Womans suffering]]
+
+[[Try not to be racist]]
+
+[[Culture appropriation but its good]]
+
+[[LettuceGTomatoBaconQabcdefghijklmnopqrstuvwxyznowyouknowyourabcnexttimewontyousing]]
+
+[[tHereStory]]
+
+[[Back ->Opening ]] 
+
+
+
+
+
+
+:: Correct {"position":"800,375","size":"100,100"}
+Your life has been spared a moment longer.
+You've earned $questionvalue.
+[[Next->Category Select]] 
+(set: $money to it + $questionvalue)
+
+
+:: Culture appropriation but its good {"position":"300,500","size":"100,100"}
+<h1>Culture appropriation but its good</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>[[$200->CA $200]]</th>
+    <th>[[$400->CA $400]]</th>
+    <th>[[$600->CA $600]]</th>
+    <th>[[$800->CA $800]]</th>
+    <th>[[$1000->CA $1000]]</th>
+  </tr>
+</table>
+
+
+:: Footer [footer] {"position":"800,200","size":"100,100"}
+
+money: $money
+lives: $lives
+
+
+:: Incorrect {"position":"1000,375","size":"100,100"}
+Your time is ticking...
+(set: $lives to it - 1)
+$lives questions remaining.
+[[Next ->Category Select]] 
+
+
+:: LG $1000 {"position":"700,1000","size":"100,100"}
+
+
+
+:: LG $200 {"position":"700,600","size":"100,100"}
+$200
+The first lesbian rights organization
+[[What is Daughters of Bilitis? ->Correct]]
+[[What is National Center for Lesbian Rights? ->Incorrect]]
+[[What is  Lavender Menace? ->Incorrect]]
+(set: $questionvalue to 200)
+
+
+:: LG $400 {"position":"700,700","size":"100,100"}
+
+
+
+:: LG $600 {"position":"700,800","size":"100,100"}
+
+
+
+:: LG $800 {"position":"700,900","size":"100,100"}
+
+
+
+:: LettuceGTomatoBaconQabcdefghijklmnopqrstuvwxyznowyouknowyourabcnexttimewontyousing {"position":"700,500","size":"100,100"}
+<h1>LettuceGTomatoBaconQabcdefghijklmnopqrstuvwxyznowyouknowyourabcnexttimewontyousing</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>[[$200->LG $200]]</th>
+    <th>[[$400->LG $400]]</th>
+    <th>[[$600->LG $600]]</th>
+    <th>[[$800->LG $800]]</th>
+    <th>[[$1000->LG $1000]]</th>
+  </tr>
+</table>
+
+
+:: Opening\  {"position":"600,200","size":"100,100"}
 Welcome to Not Jeopardy
+
+<img src="https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2023/11/20231114171156-6553fb3e30a4a83dd3d5dfd4jpeg.jpg?"/>
+
+[[Category Select]]
+
+
+:: RC $1000 {"position":"1100,1000","size":"100,100"}
+
+
+
+:: RC $200 {"position":"1100,600","size":"100,100"}
+
+
+
+:: RC $400 {"position":"1100,700","size":"100,100"}
+
+
+
+:: RC $600 {"position":"1100,800","size":"100,100"}
+
+
+
+:: RC $800 {"position":"1100,900","size":"100,100"}
+
+
+
+:: Startup [startup] {"position":"700,200","size":"100,100"}
+(set: $money to 0)
+(set: $questionvalue to 0)
+(set: $lives to 5)
+(set: $ca200 to true)
+(set: $ca400 to true)
+(set: $ca600 to true)
+(set: $ca800 to true)
+(set: $ca1000 to true)
+(set: $ws200 to true)
+(set: $ws400 to true)
+(set: $ws600 to true)
+(set: $ws800 to true)
+(set: $ws1000 to true)
+(set: $lg200 to true)
+(set: $lg400 to true)
+(set: $lg600 to true)
+(set: $lg800 to true)
+(set: $lg1000 to true)
+(set: $ts200 to true)
+(set: $ts400 to true)
+(set: $ts600 to true)
+(set: $ts800 to true)
+(set: $ts1000 to true)
+(set: $rc200 to true)
+(set: $rc400 to true)
+(set: $rc600 to true)
+(set: $rc800 to true)
+(set: $rc1000 to true)
+
+
+:: TS $1000 {"position":"900,1000","size":"100,100"}
+
+
+
+:: TS $200 {"position":"900,600","size":"100,100"}
+
+
+
+:: TS $400 {"position":"900,700","size":"100,100"}
+
+
+
+:: TS $600 {"position":"900,800","size":"100,100"}
+
+
+
+:: TS $800 {"position":"900,900","size":"100,100"}
+
+
+
+:: Try not to be racist {"position":"1100,500","size":"100,100"}
+<h1>Try not to be racist</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>[[$200->RC $200]]</th>
+    <th>[[$400->RC $400]]</th>
+    <th>[[$600->RC $600]]</th>
+    <th>[[$800->RC $800]]</th>
+    <th>[[$1000->RC $1000]]</th>
+  </tr>
+</table>
+
+
+:: WS $1000 {"position":"500,1000","size":"100,100"}
+$1000
+She was first woman to run for president
+[[Who is Margaret Sanger? ->Incorrect]]
+[[Who is Victoria Woodhul? ->Correct]]
+[[Who is Rachel Williams? ->Incorrect]]
+(set: $questionvalue to 1000)
+
+
+:: WS $200 {"position":"500,600","size":"100,100"}
+$200
+This right was stripped from women in America in 1977:
+[[What is the right to vote? ->Correct]]
+[[What is the right to education? ->Incorrect]]
+[[What is the right to freedom of speech? ->Incorrect]]
+(set: $questionvalue to 200)
+(set: $ws200 to false)
+
+
+:: WS $400 {"position":"500,700","size":"100,100"}
+$400
+This amendment was ratified in 1920, giving women the right to vote.
+[[What is the 23rd Amendment?->Correct]]
+[[What is the 17th Amendment?->Incorrect]]
+[[What is the 19th Amendment?->Correct]]
+(set: $questionvalue to 400)
+
+
+:: WS $600 {"position":"500,800","size":"100,100"}
+$600
+The month that is designated as Women's History Month
+[[What is April? ->Incorrect]]
+[[What is March? ->Correct]]
+[[What is May? ->Incorrect]] 
+(set: $questionvalue to 600)
+
+
+:: WS $800 {"position":"500,900","size":"100,100"}
+$800
+The year in which Asian women were granted the right to vote.
+[[What is 1950? ->Correct]]
+[[What is 1929? ->Incorrect]]
+[[What is 1924? ->Incorrect]]
+(set: $questionvalue to 800)
+
+
+:: Womans suffering {"position":"500,500","size":"100,100"}
+<h1>Womans suffering</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>(if: $ws200 is true)[[$200->WS $200]]</th>
+    <th>[[$400->WS $400]]</th>
+    <th>[[$600->WS $600]]</th>
+    <th>[[$800->WS $800]]</th>
+    <th>[[$1000->WS $1000]]</th>
+  </tr>
+</table>
+
+
+:: tHereStory {"position":"900,500","size":"100,100"}
+<h1>tHereStory</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>[[$200->TS $200]]</th>
+    <th>[[$400->TS $400]]</th>
+    <th>[[$600->TS $600]]</th>
+    <th>[[$800->TS $800]]</th>
+    <th>[[$1000->TS $1000]]</th>
+  </tr>
+</table>
