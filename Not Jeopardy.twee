@@ -78,11 +78,35 @@ Pick a category:
 [[Back ->Opening ]]
 
 
+
 :: Correct {"position":"800,375","size":"100,100"}
 Your life has been spared a moment longer.
 You've earned $questionvalue.
-[[Next->Category Select]] 
 (set: $money to it + $questionvalue)
+(if: $money >= 5000)[[[Won ->Win]]]\
+(else:)[[[Next->Category Select]]
+]
+
+
+
+
+
+:: Credits {"position":"1325,500","size":"100,100"}
+Not Jeopardy was made by the wonderful team of IGE and CS students:
+
+IGE Team:
+Karina Somoza Hernandez
+Isaac Herrera Raygoza
+Tien Le
+Kaley Vuong
+
+CS Team:
+Alison Fung
+Isabella Kenton
+Laurence Timothy Garcia
+Melvin Gitbumrungsin
+
+
 
 
 :: Culture appropriation but its good {"position":"300,500","size":"100,100"}
@@ -99,6 +123,15 @@ You've earned $questionvalue.
 </table>
 
 
+:: Dead {"position":"1200,375","size":"100,100"}
+<img src = "https://i.kym-cdn.com/entries/icons/facebook/000/029/198/Dark_Souls_You_Died_Screen_-_Completely_Black_Screen_0-2_screenshot.jpg"
+	width = "1000"
+    height = "400"
+    />
+    [[Credits]]
+    
+
+
 :: Footer [footer] {"position":"800,200","size":"100,100"}
 money: $money
 lives: $lives
@@ -107,13 +140,16 @@ lives: $lives
 :: Incorrect {"position":"1000,375","size":"100,100"}
 Your time is ticking...
 (set: $lives to it - 1)
-$lives questions remaining.
+(if: $lives is 0) [[[Game Over ->Dead]]]
+\
+(else:)[$lives questions remaining. 
 [[Next ->Category Select]]
+]
 
 
 :: LG $1000 {"position":"700,1000","size":"100,100"}
 $1000
-The United States' fire Pride Parade took place in this year.
+The United States' first Pride Parade took place in this year.
 [[What is 1970? ->Correct]]
 [[What is 1967? ->Incorrect]]
 [[What is 1982? ->Incorrect]]
@@ -183,12 +219,13 @@ Welcome to Not Jeopardy
 [[Category Select]]
 
 
+
 :: RC $1000 {"position":"1100,1000","size":"100,100"}
 $1000
 This amendment to the U.S. Constitution eventually granted equal protection under the law regardless of race.
 [[What is the 19th Amendment? ->Incorrect]]
-[[What is the 13th Amendment? ->Correct]]
-[[What is the 14th Amendment? ->Incorrect]]
+[[What is the 13th Amendment? ->Incorrect]]
+[[What is the 14th Amendment? ->Correct]]
 (set: $questionvalue to 1000)
 (set: $rc1000 to false)
 
@@ -332,7 +369,7 @@ The group of young adults who advocated for employment for people with disabilit
 $1000
 She was first woman to run for president
 [[Who is Margaret Sanger? ->Incorrect]]
-[[Who is Victoria Woodhul? ->Correct]]
+[[Who is Victoria Woodhull? ->Correct]]
 [[Who is Rachel Williams? ->Incorrect]]
 (set: $questionvalue to 1000)
 (set: $ws1000 to false)
@@ -378,6 +415,20 @@ The year in which Asian women were granted the right to vote.
 (set: $ws800 to false)
 
 
+:: Win {"position":"1375,375","size":"100,100"}
+CONGRATS YOU'VE WON $$money
+<img class = "awake" src = "https://pyxis.nymag.com/v1/imgs/fe1/87f/ec1cb4c8368f601f3bf9b34d52dcd33967-10-skyrim-opening-screenshot.jpg" 
+	width = "1000"
+    height = "500"
+/>
+<img class = "trudeau" src = "https://static.independent.co.uk/2020/12/04/09/urnpublicidap.orgd265f11215c041d997869feea58867e2.jpg?quality=75&width=990&crop=3%3A2%2Csmart&auto=webp" 
+	width = "200"
+    height = "150"/>
+
+[[Credits]]
+
+
+
 :: Womans suffering {"position":"500,500","size":"100,100"}
 <h1>Womans suffering</h1>
 
@@ -418,3 +469,18 @@ tw-include[type="startup"] {
 tw-icon[title="Undo"], tw-icon[title="Redo"] {
     display: none;
 }
+
+.awake{
+  position: relative;
+  z-index: 1;
+  
+}
+
+.trudeau{
+  position: relative;
+  z-index: 2;
+  left: 420px;
+  top: -400px;
+	
+}
+  
