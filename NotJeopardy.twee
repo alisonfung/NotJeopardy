@@ -32,12 +32,6 @@ Not Jeopardy
 
 
 
-:: CSS [stylesheet] {"position":"900,200","size":"100,100"}
-tw-include[type="startup"] {
-	display: none;
-}
-
-
 :: Category Select {"position":"600,375","size":"100,100"}
 Pick a category:
 
@@ -51,11 +45,7 @@ Pick a category:
 
 [[tHereStory]]
 
-[[Back ->Opening ]] 
-
-
-
-
+[[Back ->Opening ]]
 
 
 :: Correct {"position":"800,375","size":"100,100"}
@@ -80,7 +70,6 @@ You've earned $questionvalue.
 
 
 :: Footer [footer] {"position":"800,200","size":"100,100"}
-
 money: $money
 lives: $lives
 
@@ -89,11 +78,17 @@ lives: $lives
 Your time is ticking...
 (set: $lives to it - 1)
 $lives questions remaining.
-[[Next ->Category Select]] 
+[[Next ->Category Select]]
 
 
 :: LG $1000 {"position":"700,1000","size":"100,100"}
-
+$1000
+The United States' fire Pride Parade took place in this year.
+[[What is 1970? ->Correct]]
+[[What is 1967? ->Incorrect]]
+[[What is 1982? ->Incorrect]]
+(set: $questionvalue to 1000)
+(set: $lg1000 to false)
 
 
 :: LG $200 {"position":"700,600","size":"100,100"}
@@ -103,18 +98,37 @@ The first lesbian rights organization
 [[What is National Center for Lesbian Rights? ->Incorrect]]
 [[What is  Lavender Menace? ->Incorrect]]
 (set: $questionvalue to 200)
+(set: $lg200 to false)
 
 
 :: LG $400 {"position":"700,700","size":"100,100"}
-
+$400
+A riot that sparked after the raid of a gay bar in 1969.
+[[What is Esquilache Riots? ->Incorrect]]
+[[What is the Stone Wall Riots? ->Correct]]
+[[What is Pulaski Riot? ->Incorrect]]
+(set: $questionvalue to 400)
+(set: $lg400 to false)
 
 
 :: LG $600 {"position":"700,800","size":"100,100"}
-
+$600
+This planet is used as a symbol for the transgender community. Its sign being made up of a crescent and a cross which represents the harmony of the male and female principles in an individual.
+[[What is Venus? ->Incorrect]]
+[[What is Mercury? ->Correct]]
+[[What is Jupiter? ->Incorrect]]
+(set: $questionvalue to 600)
+(set: $lg600 to false)
 
 
 :: LG $800 {"position":"700,900","size":"100,100"}
-
+$800
+This animal's entire species is known to be bisexual.
+[[What is the bullet ant? ->Incorrect]]
+[[What is the shark? ->Incorrect]]
+[[What is the dwarf chimpanzee? ->Correct]]
+(set: $questionvalue to 800)
+(set: $lg800 to false)
 
 
 :: LettuceGTomatoBaconQabcdefghijklmnopqrstuvwxyznowyouknowyourabcnexttimewontyousing {"position":"700,500","size":"100,100"}
@@ -122,11 +136,11 @@ The first lesbian rights organization
 
 <table style="width:100%">
   <tr>
-    <th>[[$200->LG $200]]</th>
-    <th>[[$400->LG $400]]</th>
-    <th>[[$600->LG $600]]</th>
-    <th>[[$800->LG $800]]</th>
-    <th>[[$1000->LG $1000]]</th>
+    <th>(if: $lg200 is true)[[$200->LG $200]]</th>
+    <th>(if: $lg400 is true)[[$400->LG $400]]</th>
+    <th>(if: $lg600 is true)[[$600->LG $600]]</th>
+    <th>(if: $lg800 is true)[[$800->LG $800]]</th>
+    <th>(if: $lg1000 is true)[[$1000->LG $1000]]</th>
   </tr>
 </table>
 
@@ -296,3 +310,9 @@ The year in which Asian women were granted the right to vote.
     <th>[[$1000->TS $1000]]</th>
   </tr>
 </table>
+
+
+:: StoryStylesheet [stylesheet]
+tw-include[type="startup"] {
+	display: none;
+}
