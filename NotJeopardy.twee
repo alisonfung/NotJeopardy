@@ -410,3 +410,7 @@ The year in which Asian women were granted the right to vote.
 tw-include[type="startup"] {
 	display: none;
 }
+
+.visited {
+	color: #4169E1;
+}
