@@ -414,3 +414,7 @@ tw-include[type="startup"] {
 .visited {
 	color: #4169E1;
 }
+
+tw-icon[title="Undo"], tw-icon[title="Redo"] {
+    display: none;
+}
