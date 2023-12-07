@@ -78,6 +78,7 @@ Pick a category:
 [[Back ->Opening ]]
 
 
+
 :: Correct {"position":"800,375","size":"100,100"}
 Your life has been spared a moment longer.
 You've earned $questionvalue.
@@ -85,6 +86,9 @@ You've earned $questionvalue.
 (if: $money >= 5000)[[[Won ->Win]]]\
 (else:)[[[Next->Category Select]]
 ]
+
+
+
 
 
 :: Credits {"position":"1325,500","size":"100,100"}
@@ -101,6 +105,8 @@ Alison Fung
 Isabella Kenton
 Laurence Timothy Garcia
 Melvin Gitbumrungsin
+
+
 
 
 :: Culture appropriation but its good {"position":"300,500","size":"100,100"}
@@ -123,10 +129,11 @@ Melvin Gitbumrungsin
     height = "400"
     />
     [[Credits]]
+    
 
 
 :: Footer [footer] {"position":"800,200","size":"100,100"}
-
+<br>
 money: $money
 lives: $lives
 
@@ -211,6 +218,7 @@ Welcome to Not Jeopardy
 <img src="https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2023/11/20231114171156-6553fb3e30a4a83dd3d5dfd4jpeg.jpg?"/>
 
 [[Category Select]]
+
 
 
 :: RC $1000 {"position":"1100,1000","size":"100,100"}
@@ -421,6 +429,7 @@ CONGRATS YOU'VE WON $$money
 [[Credits]]
 
 
+
 :: Womans suffering {"position":"500,500","size":"100,100"}
 <h1>Womans suffering</h1>
 
@@ -450,11 +459,6 @@ CONGRATS YOU'VE WON $$money
 
 
 :: StoryStylesheet [stylesheet]
-tw-story {
-    background-image:url("https://www.news10.com/wp-content/uploads/sites/64/2021/09/JeopardyGettyImages-98521822.jpg")
-  background-size:cover;
-}
-
 tw-include[type="startup"] {
 	display: none;
 }
@@ -480,3 +484,4 @@ tw-icon[title="Undo"], tw-icon[title="Redo"] {
   top: -400px;
 	
 }
+  
