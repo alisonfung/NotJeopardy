@@ -80,10 +80,13 @@ This Mexican holiday celebrates the victory of the Mexican Army over the French 
 
 :: Correct {"position":"800,375","size":"100,100"}
 Your life has been spared a moment longer.
+Good job you wonderful person.
+<img src="https://www.pm.gc.ca/themes/pm_theme/images/Trudeau-head.jpg"/>
 You've earned $questionvalue.
 (set: $money to it + $questionvalue)
 (if: $money >= 5000)[[[Won ->Win]]]\
-(else:)[[[Next->Category Select]]
+(else:)[
+	[[Next->Category Select]]
 ]
 
 
@@ -136,8 +139,11 @@ Your time is ticking...
 (set: $lives to it - 1)
 (if: $lives is 0) [[[Game Over ->Dead]]]
 \
-(else:)[$lives questions remaining. 
-[[Next ->Category Select]]
+(else:)[
+	Dam really?
+	<img src="https://macleans.ca/wp-content/uploads/2016/05/MAC22_TRUDEAU_POST01.jpg"/>
+	$lives questions remaining. 
+	[[Next ->Category Select]]
 ]
 
 
