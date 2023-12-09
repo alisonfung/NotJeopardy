@@ -63,7 +63,7 @@ This Mexican holiday celebrates the victory of the Mexican Army over the French 
 
 
 :: Category Select {"position":"600,375","size":"100,100"}
-Pick a category:
+<h2>Pick a category:</h2>
 
 [[Womans suffering]]
 
@@ -102,10 +102,6 @@ Isabella Kenton
 Laurence Timothy Garcia
 Melvin Gitbumrungsin
 
-(set:$gameover = True)
-[[Play Again? ->Opening ]]
-
-
 
 :: Culture appropriation but its good {"position":"300,500","size":"100,100"}
 <h1>Culture appropriation but its good</h1>
@@ -130,7 +126,7 @@ Melvin Gitbumrungsin
 
 
 :: Footer [footer] {"position":"800,200","size":"100,100"}
-<br>
+
 money: $money
 lives: $lives
 
@@ -210,39 +206,11 @@ This animal's entire species is known to be bisexual.
 
 
 :: Opening\  {"position":"600,200","size":"100,100"}
-Welcome to Not Jeopardy
+<h2>Welcome to Not Jeopardy</h2>
+
 <img src="https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2023/11/20231114171156-6553fb3e30a4a83dd3d5dfd4jpeg.jpg?"/>
+
 [[Category Select]]
-(if:$gameover is True)[
-(set: $money to 0)
-(set: $questionvalue to 0)
-(set: $lives to 5)
-(set: $ca200 to true)
-(set: $ca400 to true)
-(set: $ca600 to true)
-(set: $ca800 to true)
-(set: $ca1000 to true)
-(set: $ws200 to true)
-(set: $ws400 to true)
-(set: $ws600 to true)
-(set: $ws800 to true)
-(set: $ws1000 to true)
-(set: $lg200 to true)
-(set: $lg400 to true)
-(set: $lg600 to true)
-(set: $lg800 to true)
-(set: $lg1000 to true)
-(set: $ts200 to true)
-(set: $ts400 to true)
-(set: $ts600 to true)
-(set: $ts800 to true)
-(set: $ts1000 to true)
-(set: $rc200 to true)
-(set: $rc400 to true)
-(set: $rc600 to true)
-(set: $rc800 to true)
-(set: $rc1000 to true)
-(set: $gameover to False)]
 
 
 :: RC $1000 {"position":"1100,1000","size":"100,100"}
@@ -324,7 +292,6 @@ This phrase refers to anxiety over confirming existing stereotypes:
 (set: $rc600 to true)
 (set: $rc800 to true)
 (set: $rc1000 to true)
-(set: $gameover to False)
 
 
 :: TS $1000 {"position":"900,1000","size":"100,100"}
@@ -483,16 +450,27 @@ CONGRATS YOU'VE WON $$money
 
 
 :: StoryStylesheet [stylesheet]
+tw-story {
+  background-image:url("https://media.discordapp.net/attachments/1157065002440732775/1182847944521682974/jeopary.png?ex=65862ffe&is=6573bafe&hm=f4f33094d6f7b0f90ae656e410d5c296c6c72da9428a1e9c0da0d77712848347&=&format=webp&quality=lossless&width=960&height=640");
+  background-size:cover;
+  
+  
+}
+
 tw-include[type="startup"] {
 	display: none;
 }
 
 .visited {
-	color: #4169E1;
+	color: #E0B441;
 }
 
 tw-icon[title="Undo"], tw-icon[title="Redo"] {
     display: none;
+}
+
+tw-link {
+  color: #E0B441;
 }
 
 .awake{
