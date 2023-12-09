@@ -105,6 +105,9 @@ Isabella Kenton
 Laurence Timothy Garcia
 Melvin Gitbumrungsin
 
+(set:$gameover = True)
+[[Play Again? ->Opening ]]
+
 
 :: Culture appropriation but its good {"position":"300,500","size":"100,100"}
 <h1>Culture appropriation but its good</h1>
@@ -129,7 +132,7 @@ Melvin Gitbumrungsin
 
 
 :: Footer [footer] {"position":"800,200","size":"100,100"}
-
+<br>
 money: $money
 lives: $lives
 
@@ -217,6 +220,36 @@ This animal's entire species is known to be bisexual.
 <img src="https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2023/11/20231114171156-6553fb3e30a4a83dd3d5dfd4jpeg.jpg?"/>
 
 [[Category Select]]
+(if:$gameover is True)[
+(set: $money to 0)
+(set: $questionvalue to 0)
+(set: $lives to 5)
+(set: $ca200 to true)
+(set: $ca400 to true)
+(set: $ca600 to true)
+(set: $ca800 to true)
+(set: $ca1000 to true)
+(set: $ws200 to true)
+(set: $ws400 to true)
+(set: $ws600 to true)
+(set: $ws800 to true)
+(set: $ws1000 to true)
+(set: $lg200 to true)
+(set: $lg400 to true)
+(set: $lg600 to true)
+(set: $lg800 to true)
+(set: $lg1000 to true)
+(set: $ts200 to true)
+(set: $ts400 to true)
+(set: $ts600 to true)
+(set: $ts800 to true)
+(set: $ts1000 to true)
+(set: $rc200 to true)
+(set: $rc400 to true)
+(set: $rc600 to true)
+(set: $rc800 to true)
+(set: $rc1000 to true)
+(set: $gameover to False)]
 
 
 :: RC $1000 {"position":"1100,1000","size":"100,100"}
@@ -298,6 +331,7 @@ This phrase refers to anxiety over confirming existing stereotypes:
 (set: $rc600 to true)
 (set: $rc800 to true)
 (set: $rc1000 to true)
+(set: $gameover to False)
 
 
 :: TS $1000 {"position":"900,1000","size":"100,100"}
