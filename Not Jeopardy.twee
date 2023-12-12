@@ -131,7 +131,7 @@ Melvin Gitbumrungsin
     [[Credits]]
 
 
-:: Footer [footer] {"position":"800,200","size":"100,100"}
+:: Footer [footer] {"position":"800,100","size":"100,100"}
 <br>
 money: $money
 lives: $lives
@@ -214,10 +214,18 @@ This animal's entire species is known to be bisexual.
 </table>
 
 
-:: Opening\  {"position":"600,200","size":"100,100"}
-<h2>Welcome to Not Jeopardy</h2>
+:: Opening\  {"position":"600,100","size":"100,100"}
+"Welcome to Not Jeopardy! I'm your host, Justin Trudeau. Play the game or die."
 
 <img src="https://www.winnipegfreepress.com/wp-content/uploads/sites/2/2023/11/20231114171156-6553fb3e30a4a83dd3d5dfd4jpeg.jpg?"/>
+
+[[Next ->Prescreen]]
+
+
+:: Prescreen {"position":"600,200","size":"100,100"}
+Justin Trudeau: "Thank you all for coming today! Let me introduce to you the categories."
+
+<img src="https://smartcdn.gprod.postmedia.digital/torontosun/wp-content/uploads/2023/11/Justin_trudeau_carbon_tax_environment_green_4x3.jpg?quality=90&strip=all&w=564&h=423&type=webp&sig=YQ5GUd3zmLwpb1qV40xupg" />
 
 [[Category Select]]
 (if:$gameover is True)[
@@ -302,7 +310,7 @@ This phrase refers to anxiety over confirming existing stereotypes:
 (set: $rc800 to false)
 
 
-:: Startup [startup] {"position":"700,200","size":"100,100"}
+:: Startup [startup] {"position":"700,100","size":"100,100"}
 (set: $money to 0)
 (set: $questionvalue to 0)
 (set: $lives to 5)
