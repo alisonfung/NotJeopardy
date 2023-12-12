@@ -121,6 +121,7 @@ Melvin Gitbumrungsin
     <th>(if: $ca1000 is true)[[$1000->CA $1000]]</th>
   </tr>
 </table>
+(if:not $ca200 and not $ca400 and not $ca600 and not $ca800 and not $ca1000)[ [[Back ->Category Select]] ]
 
 
 :: Dead {"position":"1200,375","size":"100,100"}
@@ -212,6 +213,7 @@ This animal's entire species is known to be bisexual.
     <th>(if: $lg1000 is true)[[$1000->LG $1000]]</th>
   </tr>
 </table>
+(if:not $lg200 and not $lg400 and not $lg600 and not $lg800 and not $lg1000)[ [[Back ->Category Select]] ]
 
 
 :: Opening\  {"position":"600,100","size":"100,100"}
@@ -404,6 +406,7 @@ The group of young adults who advocated for employment for people with disabilit
     <th>(if: $rc1000 is true)[[$1000->RC $1000]]</th>
   </tr>
 </table>
+(if:not $rc200 and not $rc400 and not $rc600 and not $rc800 and not $rc1000)[ [[Back ->Category Select]] ]
 
 
 :: WS $1000 {"position":"500,1000","size":"100,100"}
@@ -481,6 +484,7 @@ CONGRATS YOU'VE WON $$money
     <th>(if: $ws1000 is true)[[$1000->WS $1000]]</th>
   </tr>
 </table>
+(if:not $ws200 and not $ws400 and not $ws600 and not $ws800 and not $ws1000)[ [[Back ->Category Select]] ]
 
 
 :: tHereStory {"position":"900,500","size":"100,100"}
@@ -495,6 +499,7 @@ CONGRATS YOU'VE WON $$money
     <th>(if: $ts1000 is true)[[$1000->TS $1000]]</th>
   </tr>
 </table>
+(if:not $ts200 and not $ts400 and not $ts600 and not $ts800 and not $ts1000)[ [[Back ->Category Select]] ]
 
 
 :: StoryStylesheet [stylesheet]
